@@ -1,0 +1,25 @@
+{
+  "name": "cy-pageobjects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paloma-pro/Exerc-cioEbacM22.git"
+  },
+  "author": "paloma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paloma-pro/Exerc-cioEbacM22/issues"
+  },
+  "homepage": "https://github.com/Paloma-pro/Exerc-cioEbacM22#readme",
+  "description": "",
+  "dependencies": {
+    "cypress": "^14.5.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.8.0"
+  }
+}
