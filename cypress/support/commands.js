@@ -23,3 +23,26 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import RegistrationPage from "../support/pages/registro.page";
+import EscolherProduto from "../support/pages/produto.page";
+
+const escolherProduto = new EscolherProduto();
+const registrationPage = new RegistrationPage();
+
+Cypress.Commands.add('account', (email, senha) => {
+    registrationPage.preencherDados(email, senha)
+    registrationPage.submeterCadastro()
+    // profilePage.customerName().should('contain', `${nome}`)
+    
+})
+
+Cypress.Commands.add('checkout', (nome, sobrenome, endereço, cidade, cep, telefone) => {
+    escolherProduto.selecProduct()
+    escolherProduto.infProduct()
+    escolherProduto.abrirCarrinho()
+    escolherProduto.dadosPreencher(nome, sobrenome, endereço, cidade, cep, telefone)
+    escolherProduto.finalizarCompra()
+    escolherProduto.validacao()
+})
+
